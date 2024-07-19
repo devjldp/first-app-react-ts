@@ -24,9 +24,9 @@ const mockTodos = [
 
 const App = (): JSX.Element => {
   /*
-    Podemos anadir los tipos que nos devuelve este componente:
-        * JSX.Element si no tenemos props podemos usar este.
-        * React.FC si tenemos props es mejor este. Al principio nos da un error: Type 'element' is not assignable to type 'FC<{}>' Type ReactElement<any,any> provides no match for the signature '(props: {}, deprecatedLegacyContext?: any):ReactNode'
+    We can specify the types returned by this component:
+        JSX.Element: If the component does not have props, we can use this type.
+        React.FC: If the component has props, it’s better to use this type. Initially, it provides us with an implicit typing for the props.We have an error: Type 'element' is not assignable to type 'FC<{}>' Type ReactElement<any,any> provides no match for the signature '(props: {}, deprecatedLegacyContext?: any):ReactNode'
   */
 
   // state variables

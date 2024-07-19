@@ -1,3 +1,8 @@
+// import Todo component.
+import { Todo } from "./Todo"
+
+
+// import types
 import { type ListOfTodos } from "../types"
 
 
@@ -14,9 +19,12 @@ export const Todos: React.FC<Props> = ({ todos }) => {
         <ul>
             {todos.map(todo => {
                 return (
-                    <li key={todo.id}>
-                        {todo.title}
-                    </li>
+                    <Todo
+                        key={todo.id}
+                        id={todo.id}
+                        title={todo.title}
+                        completed={todo.completed}
+                    />
                 )
             })}
         </ul>
