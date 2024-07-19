@@ -27,6 +27,7 @@ export default [
   {
     plugins: ['react', 'react-refresh'],
     rules: {
+      'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off', // Disable rule for React 17+
       // Add other rules or customizations here
     },
