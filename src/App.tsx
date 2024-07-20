@@ -4,7 +4,7 @@ import { Todos } from './components/Todos'
 import { AddTodo } from './components/AddTodo'
 
 // import types
-import { type Todo as TodoType } from './types'
+import { type Todo as TodoType } from './types/types'
 
 
 // import styles 

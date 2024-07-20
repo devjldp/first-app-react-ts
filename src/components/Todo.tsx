@@ -1,4 +1,4 @@
-import { type Todo as TodoType } from "../types"
+import { type Todo as TodoType } from "../types/types"
 
 
 interface Props extends TodoType {

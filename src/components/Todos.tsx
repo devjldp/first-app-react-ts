@@ -3,8 +3,8 @@ import { Todo } from "./Todo"
 
 
 // import types
-import { type ListOfTodos } from "../types"
-import { type Todo as TodoType } from "../types"
+import { type ListOfTodos } from "../types/types"
+import { type Todo as TodoType } from "../types/types"
 
 
 // Define the Props interface for the Todos component
