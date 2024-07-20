@@ -1,14 +1,20 @@
 import { useState } from 'react'
 // import componentes
 import { Todos } from './components/Todos'
+import { AddTodo } from './components/AddTodo'
 
+// import types
+import { type Todo as TodoType } from './types'
+
+
+// import styles 
 import './App.css'
 
 const mockTodos = [
   {
     id: "1",
     title: "todo 1",
-    completed: false
+    completed: true
   },
   {
     id: "2",
@@ -33,10 +39,40 @@ const App = (): JSX.Element => {
 
   const [todos, setTodos] = useState(mockTodos)
 
+  const handleRemove = (id: string) => {
+    const newTodos = todos.filter(todo => todo.id !== id)
+    setTodos(newTodos)
+  }
+
+  /*
+  const handleCompleted = (id: string): void => {
+    const task = todos.filter(todo => todo.id === id)
+    // task[0].completed = true
+    task[0].completed ? task[0].completed = false : task[0].completed = true
+    console.log(task[0].completed)
+  } */
+
+
+  // This is midudev solutions
+  const handleCompleted = ({ id, completed }: Pick<TodoType, 'id' | 'completed'>): void => {
+    const newTodos = todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, completed }
+      }
+      return todo
+    })
+    setTodos(newTodos)
+  }
+
   return (
     <>
-      <h1>todo mvc</h1>
-      <Todos todos={todos} />
+      <h1 className='text-center'>todo mvc</h1>
+      <AddTodo />
+      <Todos
+        onRemoveTodo={handleRemove}
+        onToggleCompleted={handleCompleted}
+        todos={todos}
+      />
     </>
   )
 }
