@@ -2,6 +2,7 @@ import { useState } from 'react'
 // import componentes
 import { Todos } from './components/Todos'
 import { AddTodo } from './components/AddTodo'
+import { Footer } from './components/Footer'
 
 // import types
 import { type Todo as TodoType } from './types/types'
@@ -73,6 +74,7 @@ const App = (): JSX.Element => {
         onToggleCompleted={handleCompleted}
         todos={todos}
       />
+      <Footer todos={todos} />
     </>
   )
 }
