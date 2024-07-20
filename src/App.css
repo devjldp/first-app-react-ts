@@ -1,0 +1,32 @@
+.text-center {
+    text-align: center
+}
+
+
+/*----- Todo list -------*/
+.list-container {
+    width: 70vw;
+    margin: auto;
+    background-color: rgb(154, 154, 177);
+    text-align: center;
+    list-style: none;
+    padding: 0;
+
+}
+
+.list-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-element:hover {
+    border: 1px solid red;
+    cursor: pointer
+}
+
+.completed {
+    text-decoration: line-through;
+    text-decoration-color: green;
+}
